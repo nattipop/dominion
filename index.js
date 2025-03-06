@@ -94,7 +94,7 @@ app.get("/all-dominion-services", cors(), (req, res) => {
   })
 });
 
-app.post("/add-dominion-service", cors(), async (req, res) => {
+app.post("/new-dominion-service", cors(), async (req, res) => {
   const data = req.body;
   
   if(!data.title) res.status(422).send("Service title required.");
