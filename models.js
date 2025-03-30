@@ -9,7 +9,7 @@ const PhotoSchema = new Schema({
   category: String
 })
 
-const ServiceSchema = new Schema({
+const DominionServiceSchema = new Schema({
   title: String,
   service_id: String,
   price: String,
@@ -20,5 +20,5 @@ const ServiceSchema = new Schema({
 });
 
 
-exports.DominionPhoto = mongoose.model("photo", PhotoSchema);
-exports.DominionService = mongoose.model("service", ServiceSchema);
+exports.DominionPhoto = mongoose.model("dominionPhoto", PhotoSchema);
+exports.DominionService = mongoose.model("dominionService", DominionServiceSchema);
