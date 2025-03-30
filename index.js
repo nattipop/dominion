@@ -119,7 +119,7 @@ app.post("/new-dominion-service", cors(), async (req, res) => {
 app.get("/dominion-service/:category", cors(), async (req, res) => {
   const category = req.params.category;
 
-  await Service.find({ category: category }).sort({order:1}).then(services => {
+  await DominionService.find({ category: category }).then(services => {
     if(!services){
       return res.status(404).send("No Services to show.")
     }
