@@ -131,7 +131,7 @@ app.get("/dominion-service/:category", cors(), async (req, res) => {
 app.get("/dominion-service-by-id/:service_id", cors(), async (req, res) => {
   const service_id = req.params.service_id;
 
-  await Service.findOne({ service_id: service_id }).then(service => {
+  await DominionService.findOne({ service_id: service_id }).then(service => {
     if(!service){
       return res.status(404).send("Could not find service with that id.")
     }
