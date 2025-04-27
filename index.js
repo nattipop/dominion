@@ -51,6 +51,7 @@ app.get("/dominion-photos/:category", cors(), async (req, res) => {
 
 app.get("/dominion-photo-by-id/:photo_id", cors(), async (req, res) => {
   const photo_id = req.params.photo_id;
+  console.log(photo_id)
 
   await DominionPhoto.findOne({ photo_id: photo_id }).then(photo => {
     if(!photo){
